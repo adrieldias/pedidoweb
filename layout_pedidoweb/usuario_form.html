@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Layout da tela de Cadastro de Usuário</title>
+		<meta name="viewport" content="width-device-width, initial-scale=1.0">
+		<!-- Bootstrap -->
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+		<meta charset="UTF-8">			
+	</head>
+	
+	<body>
+		<div class="container">
+			<p><h1>Cadastro de usuário</h1></p>	
+			<form ng-submit="salva()">
+				<div class="form-group">
+					<label for="nome">Nome</label>
+					<input type="text" class="form-control" id="nome"
+						name="nome" required ng-model="usuario.nome">
+				</div>
+				<div class="form-group">
+					<label for="senha">Senha</label>
+					<input type="password" class="form-control" id="senha"
+						name="senha" required ng-model="usuario.senha">
+				</div>
+				
+				<button type="submit" class="btn btn-primary">
+					Salvar
+				</button>
+				<a href="#/" class="btn btn-default">
+					Voltar
+				</a>
+			</form>
+			
+			
+			
+		</div>
+		<!-- jquery (necessário) -->
+		<script src="js/jquery.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+	</body>
+</html>
