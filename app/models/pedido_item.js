@@ -6,16 +6,33 @@ module.exports = function(){
 		cod_pedido_item: {
 			type: Number,
 			required: true,
-			index:{
-				unique: true
-			}
+			index:{unique: true}
+		},		
+		
+		cod_produto: {
+			type: mongoose.Schema.ObjectId,	ref: 'Produto',
+			required: true,			
 		},
-		cod_pedido: {
+		
+		qt_quantidade: {
 			type: Number,
 			required: true,			
 		},
 		
-	});
-	
+		perc_desconto: {
+			type: Number,
+			required: true,			
+		},
+		
+		desc_observacao: {
+			type: String,						
+		},
+		
+		val_unitario: {
+			type: Number,
+			required: true,			
+		},
+		
+	});	
 	return mongoose.model('Pedido_item', schema);
 };
