@@ -22,6 +22,10 @@ module.exports = function(){
 		dataEmissao: {
 			type: Date,
 			required: true	
+		},
+		item: {
+			type: mongoose.Schema.ObjectId,
+			ref: 'Pedido_item'
 		}
 	});
 	
