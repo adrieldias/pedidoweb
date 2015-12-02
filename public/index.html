@@ -2,23 +2,63 @@
 <!doctype html>
 <html ng-app="pedidoweb">
 	<head>
-		<title>Pedidos Web</title>
+		<title>Pedidos Online</title>
 		<!-- <meta name="viewport" content="width=device-width"> -->
 		<meta charset="UTF-8">
 		<link rel= "stylesheet" href= "vendor/bootstrap/dist/css/bootstrap.css" >
-		<link rel= "stylesheet" href= "vendor/bootstrap/dist/css/bootstrap-theme.css" >	
+		<!--<link rel= "stylesheet" href= "vendor/bootstrap/dist/css/bootstrap-theme.css" >-->
+		
+		<!-- estilos personalizados -->
+		<link type="text/css" rel="stylesheet" href="stylesheet/stylesheet.css" />	
 	</head>
 	
 	<body class="container">
+		<nav class="navbar navbar-default">			
+				<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="#">
+					<span class="label label-primary">CEMAPA</span>
+					<span class="label label-warning">Pedidos Online</span>
+				</a>
+				</div>
+			
+				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+				
+				<!--<ul class="nav navbar-nav navbar-right">
+					<li><a href="#">Link</a></li>
+				</ul>-->
+				</div>			
+		</nav>
 		<div ng-view>
 			
-		</div>				
+		</div>		
+				
 		<script src="vendor/angular/angular.js"></script>
 		<script src="vendor/angular-route/angular-route.js"></script>
 		<script src="vendor/angular-resource/angular-resource.js"></script>
 		<script src="js/main.js"></script>
 		<script src="js/services/ContatoService.js"></script>
 		<script src="js/controllers/ContatosController.js"></script>
-		<script src="js/controllers/ContatoController.js"></script>				
+		<script src="js/controllers/ContatoController.js"></script>	
+		<script src="vendor/jquery/dist/jquery.js"></script>
+		<script src="vendor/bootstrap/dist/js/bootstrap.min.js"></script>	
+		<footer>					
+			<div align="center">
+			<br>
+			<p><h6>2015 CEMAPA - Pedidos Online V 0.1</h6></p>
+			<p><h6>Av. João XXIII, 2150 Medianeira - PR</h6></p>
+			<p>
+				<h6>
+					<span class="glyphicon glyphicon-phone-alt" aria-hidden="true"></span>
+					(45) 3264-3773
+				</h6>
+			</p>					
+			</div>
+		</footer>		
 	</body>
 </html>
