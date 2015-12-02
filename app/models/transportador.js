@@ -11,7 +11,6 @@ module.exports = function(){
 			type: String,
 			required: true
 		}
-	});
-	
+	});	
 	return mongoose.model('Transportador', schema);
 };
