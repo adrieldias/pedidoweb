@@ -66,8 +66,7 @@ module.exports = function(app) {
 	
 	function adiciona(pedido_itemNovo){
 		
-	}
-	
+	}	
 	function atualiza(pedido_itemAlterar) {
 		
 	}
