@@ -61,10 +61,11 @@
 							class="btn btn-info">
 							Mais Informações
 						</button>
-						<button ng-click="#/contato/{{contato._id}}"
-							class="btn btn-primary">
+						<a ng-href="#/contato/{{contato._id}}">
+							<button class="btn btn-primary">
 							Editar
-						</button>
+							</button>
+						</a>
 						<button ng-click="remove(contato)" 
 							class="btn btn-warning">
 								Excluir

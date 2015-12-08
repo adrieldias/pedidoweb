@@ -30,5 +30,5 @@ angular.module('pedidoweb').controller('ContatosController',
 					console.log(erro);
 				}
 			);
-		};
+		};			
 	});
