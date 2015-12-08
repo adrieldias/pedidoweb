@@ -1,19 +1,104 @@
 <!-- public/partials/contatos.html -->
-<div class="jumbotron">
-	<h1 class="text-center">
-		Bem vindo ao Pedidos Web
-	</h1>
-</div>
-<p ng-show="mensagem.texto">
-	{{mensagem.texto}}
-</p>
+<div class="container-fluid">	<!-- Elementos da página devem estar dentro de um container -->					
+	<!-- Barra lateral esquerda -->
+	<aside role="complementary" class="col-md-2">  
+		<ul class="nav nav-pills nav-stacked">
+			<li role="presentation" class="menulateral">
+				<a href="#">
+					<span class="glyphicon glyphicon-star-empty" aria-hidden="false"></span>
+					Home
+				</a>
+			</li>
+			<li role="presentation" class="menulateral">
+				<a href="#">
+					<span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+					Profile
+				</a>
+			</li>
+			<li role="presentation" class="menulateral">
+				<a href="#">
+					<span class="glyphicon glyphicon-phone-alt" aria-hidden="true"></span>
+					Messages
+				</a>
+			</li>
+		</ul>
+	
+	</aside>
+	<div role="complementary" class="col-md-10">
+		<div class="input-group">
+			<input ng-model="filtro" type="search" class="form-control" placeholder="Pesquisar por Usuário...">
+			<span class="input-group-btn">
+				<button class="btn btn-default" type="button">
+					Pesquisar
+				</button>
+			</span>
+		</div>	
+		<br>				
+	</div>
 
-<div class="form-group">
+	<div role="main" class="col-md-10 principal">
+			<p><h1>Usuários</h1></p>
+			<br>
+			<p>
+			<a href="#" class="btn btn-primary">Novo usuário</a>
+			</p>
+		
+		
+		<div class="table-responsive">
+			<table class="table table-hover">
+				<tr>
+					<th>NOME</th>
+					<th>E-MAIL</th>
+					<th class="text-center">AÇÃO</th>	
+				</tr>
+				<tr ng-repeat="contato in contatos | filter: filtro" style="font-size: large">
+					<td>
+						<a ng-href="#/contato/{{contato._id}}">{{contato.nome}}</a>
+					</td>
+					<td>{{contato.email}}</td>
+					<td class="text-center">
+						<button ng-click="detalha(contato)"
+							class="btn btn-info">
+							Mais Informações
+						</button>
+						<button ng-click="#/contato/{{contato._id}}"
+							class="btn btn-primary">
+							Editar
+						</button>
+						<button ng-click="remove(contato)" 
+							class="btn btn-warning">
+								Excluir
+						</button>
+					</td>
+				</tr>
+			</table>
+			<nav>
+				<ul class="pagination">
+					<li class="disabled"><a href="#" aria-label="Previous">
+						<span aria-hidden="true">&laquo;</span></a></li>
+					<li class="active"><a href="#">
+						1 <span class="sr-only">(current)</span></a></li>
+					<li class="active"><a href="#">
+						2 <span class="sr-only">(current)</span></a></li>
+					<li class="active"><a href="#">
+						3 <span class="sr-only">(current)</span></a></li>
+					<li class="active"><a href="#">
+						4 <span class="sr-only">(current)</span></a></li>
+					<li class="enabled"><a href="#" aria-label="Next">
+						<span aria-hidden="true">&raquo;</span></a></li>
+				</ul>
+			</nav>
+		</div>                         
+	<!--</div>-->
+
+</div>
+
+<!--<div class="form-group">
 	<a ng-href="#/contato" class="btn btn-primary">Novo Contato</a>
 	Contatos cadastrados: {{contatos.length}}
 </div>
 <div class="input-group">
-	<!--<span class="input-group-addon">Procurar</span>-->
+	<!--<span class="input-group-addon">Procurar</span>
 	<span class="glyphicon glyphicon-search input-group-addon" aria-hidden="true"></span>
 	<input ng-model="filtro" type="search" placeholder="digite parte do nome" class="form-control">
 </div>
@@ -42,5 +127,5 @@
 			</td>			
 		</tr>
 	</table>
-</div>
+</div>-->
 
