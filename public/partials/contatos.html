@@ -4,19 +4,19 @@
 	<aside role="complementary" class="col-md-2">  
 		<ul class="nav nav-pills nav-stacked">
 			<li role="presentation" class="menulateral">
-				<a href="#">
+				<a href="#/contatos">
 					<span class="glyphicon glyphicon-star-empty" aria-hidden="false"></span>
 					Home
 				</a>
 			</li>
 			<li role="presentation" class="menulateral">
-				<a href="#">
+				<a href="#/contatos">
 					<span class="glyphicon glyphicon-search" aria-hidden="true"></span>
 					Profile
 				</a>
 			</li>
 			<li role="presentation" class="menulateral">
-				<a href="#">
+				<a href="#/contatos">
 					<span class="glyphicon glyphicon-phone-alt" aria-hidden="true"></span>
 					Messages
 				</a>
@@ -40,7 +40,7 @@
 			<p><h1>Usuários</h1></p>
 			<br>
 			<p>
-			<a href="#" class="btn btn-primary">Novo usuário</a>
+			<a href="#/contato" class="btn btn-primary">Novo usuário</a>
 			</p>
 		
 		
@@ -61,10 +61,11 @@
 							class="btn btn-info">
 							Mais Informações
 						</button>
-						<button ng-click="#/contato/{{contato._id}}"
-							class="btn btn-primary">
+						<a ng-href="#/contato/{{contato._id}}">
+							<button class="btn btn-primary">
 							Editar
-						</button>
+							</button>
+						</a>
 						<button ng-click="remove(contato)" 
 							class="btn btn-warning">
 								Excluir
