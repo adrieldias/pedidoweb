@@ -14,5 +14,14 @@ angular.module('pedidoweb', ['ngRoute','ngResource'])
 			templateUrl: '/partials/contato.html',
 			controller: 'ContatoController'
 		});
+		$routeProvider.when('/pedidos', {
+			templateUrl: '/partials/pedidos.html',
+			controller: 'PedidosController'
+		});
+		$routeProvider.when('/pedido', {
+			templateUrl: '/partials/pedido.html',
+			controller: 'PedidoController'
+		});
+		
 		$routeProvider.otherwise({redirectTo: '/contatos'});
 	});
